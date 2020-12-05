@@ -92,7 +92,7 @@ def deploy(push_data=False):
     if push_data:
         myfab.run("mkdir -p {}/{}/".format(release_path, "datasets"))
         myfab.run(
-            "cp {}/* {}/{}/".format(myfab.data_path, release_path, "datasets")
+            "cp -r {}/* {}/{}/".format(myfab.data_path, release_path, "datasets")
         )
 
     # symlinks
